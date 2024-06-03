@@ -1,48 +1,41 @@
-// Array containing question objects
 var questionsArr = [
   {
-    question: 'JavaScript is the best language.',
+    question: 'There are 365 days in a year',
     answer: true
   },
   {
-    question: 'The Earth is flat.',
+    question: 'Ice is hot',
     answer: false
   },
   {
-    question: '2 + 2 equals 4.',
+    question: 'An octogon has eight sides',
     answer: true
   },
   {
-    question: 'The moon is made of cheese.',
-    answer: false
+    question: 'Washington D.C. is the capital of the United States',
+    answer: true
   },
   {
-    question: 'The sun rises in the west.',
+    question: 'Spiders have six legs',
     answer: false
   }
 ];
 
-// Function to run the quiz
 function runQuiz() {
-  let correctAnswers = 0; // Counter for correct answers
+  let correctAnswers = 0;
 
-  // Loop through each question in the array
   for (let i = 0; i < questionsArr.length; i++) {
-    // Ask the user the question and get the response (true or false)
     let userAnswer = confirm(questionsArr[i].question);
     
-    // Check if the user's answer matches the correct answer
+   
     if (userAnswer === questionsArr[i].answer) {
-      correctAnswers++; // Increment the correct answers counter
+      correctAnswers++;
     }
   }
 
-  // Calculate the percentage of correct answers
   let scorePercentage = (correctAnswers / questionsArr.length) * 100;
 
-  // Round the percentage to a whole number
   scorePercentage = Math.round(scorePercentage);
-
-  // Display the final score to the user
+  
   alert('Your final score is: ' + scorePercentage + '%');
 }
