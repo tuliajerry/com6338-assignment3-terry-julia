@@ -27,14 +27,12 @@ function runQuiz() {
   for (let i = 0; i < questionsArr.length; i++) {
     let userAnswer = confirm(questionsArr[i].question);
     
-   
     if (userAnswer === questionsArr[i].answer) {
       correctAnswers++;
     }
   }
 
   let scorePercentage = (correctAnswers / questionsArr.length) * 100;
-
   scorePercentage = Math.round(scorePercentage);
   
   alert('Your final score is: ' + scorePercentage + '%');
